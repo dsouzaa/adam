@@ -36,3 +36,5 @@ terraform.rc
 # Ignore any SSH keys
 *.pem
 *.pub
+ubuntu_keys
+tutorial_kp

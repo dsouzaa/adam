@@ -11,7 +11,7 @@ terraform {
   }
 
   // This is the required version of Terraform
-  required_version = "~> 1.1.5"
+  #required_version = "~> 1.1.5"
 }
 
 // Here we are configuring our aws provider. 
@@ -370,7 +370,8 @@ resource "aws_instance" "tutorial_web" {
   
   // The key pair to connect to the EC2 instance. We are using the "tutorial_kp" key 
   // pair that we created
-  key_name               = aws_key_pair.tutorial_kp.key_name
+  #key_name               = aws_key_pair.tutorial_kp.key_name
+  key_name               = "ubuntu_keys" 
   
   // The security groups of the EC2 instance. This takes a list, however we only
   // have 1 security group for the EC2 instances.
